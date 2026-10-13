@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mdodeja.github.io/eu-ai-act-article-50-guide/sitemap.xml

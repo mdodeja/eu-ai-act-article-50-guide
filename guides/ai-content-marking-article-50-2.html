@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine-readable marking for AI-generated content under Article 50(2) | Article 50 Guide for Agencies</title>
+<meta name="description" content="What the EU AI Act&#x27;s machine-readable marking duty means for agencies that publish AI-generated images, video, audio and text, including C2PA, IPTC metadata, and the reported grace period.">
+<link rel="canonical" href="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-content-marking-article-50-2.html">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:title" content="Machine-readable marking for AI-generated content under Article 50(2) | Article 50 Guide for Agencies">
+<meta property="og:description" content="What the EU AI Act&#x27;s machine-readable marking duty means for agencies that publish AI-generated images, video, audio and text, including C2PA, IPTC metadata, and the reported grace period.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-content-marking-article-50-2.html">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Machine-readable marking for AI-generated content under Article 50(2)", "description": "What the EU AI Act's machine-readable marking duty means for agencies that publish AI-generated images, video, audio and text, including C2PA, IPTC metadata, and the reported grace period.", "dateModified": "2026-10-13", "mainEntityOfPage": "https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-content-marking-article-50-2.html", "publisher": {"@type": "Organization", "name": "Mayurventure"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Article 50 Guide for Agencies</a>
+    <nav><a href="../index.html">Guides</a><a href="../about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Machine-readable marking for AI-generated content under Article 50(2)</h1>
+<p class="meta">Last reviewed 13 October 2026</p>
+<div class="short"><strong>Short answer.</strong> The marking duty is the provider&#x27;s, so if you generate content with a major tool, your main job is to check what it embeds and avoid stripping it. If you built your own generation pipeline, you may need to add provenance metadata at export.</div>
+<h2>What Article 50(2) requires</h2>
+<p>Article 50(2) requires providers of AI systems that generate synthetic audio, images, video or text to make sure the outputs are marked in a machine-readable format and are detectable as artificially generated or manipulated. The technical solutions have to be effective, interoperable, robust and reliable, as far as is technically feasible.</p>
+<p>There is an exception for AI that only performs an assistive function for standard editing, or that does not substantially alter the input data. Grammar fixes and routine edits sit on the safe side of that line.</p>
+<h2>Who this lands on</h2>
+<p>The duty is the provider's. If you generate images or video through a major platform, that platform is the provider and much of the marking should ship with the tool. Your job is to find out what it adds and to avoid removing it.</p>
+<p>If you built a custom pipeline, meaning your own code calling a model API, you may be the provider of that system. In that case the marking is yours to add.</p>
+<h2>What to check in a client workflow</h2>
+<ol>
+<li><strong>Find out what the tool embeds.</strong> Look for C2PA or Content Credentials metadata, or a watermark such as the tool vendor's own. Write down the tool and the feature.</li>
+<li><strong>Don't strip it.</strong> Screenshots, re-encoding, and image optimizers or editors that drop metadata can wipe the provenance signal. Check that the file you actually publish still carries it.</li>
+<li><strong>Add it where it is missing.</strong> For a custom pipeline, attach a C2PA manifest at export. For images, the minimum is an IPTC <code>DigitalSourceType</code> of <code>trainedAlgorithmicMedia</code>.</li>
+<li><strong>Record which kind of output each pipeline makes.</strong> Fully AI-generated and AI-assisted content carry different expectations, so note which one you produce.</li>
+<li><strong>Use the EU's icons where a visible label is wanted.</strong> The Commission has published a set of icons that deployers may use to label AI-generated content.</li>
+</ol>
+<p>Metadata is not a visible label. Content that realistically depicts real people, places or events needs a visible disclosure as well. See the <a href="labeling-ai-written-articles.html">guide to labelling AI-written and AI-generated content</a>.</p>
+<h2>The timing question</h2>
+<p>The Commission's page on the Code of Practice says the transparency requirements are applicable from 2 August 2026.</p>
+<p>Law firm summaries of the Digital Omnibus report a transitional rule for this duty. Gibson Dunn and Paul Weiss describe a grace period until 2 December 2026 for generative systems that were already on the market before 2 August 2026, and Paul Weiss reports a later date of 2 February 2027 for watermark-detection interoperability. The Commission's page does not mention these dates. Treat them as reported, not confirmed, and check the current text before you rely on them. Systems first placed on the market after 2 August 2026 do not appear to get the extra time.</p>
+<p>The Paul Weiss memo also reports that the Commission has not identified a single marking technique that meets the standard, which points to combining methods such as metadata and watermarking.</p>
+<h2>The Code of Practice</h2>
+<p>The Commission published the final Code of Practice on Transparency of AI-generated Content in June 2026. It is voluntary, but signing lets providers rely on its measures to show compliance. It has two sections: one for providers on marking and detection, and one for deployers on labelling deepfakes and AI-generated text. The Commission says plainly that, although adherence is voluntary, the Article 50 requirements are legal obligations.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://artificialintelligenceact.eu/article/50/">Article 50 text</a> at artificialintelligenceact.eu</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a> on EUR-Lex</li>
+<li><a href="https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content">European Commission: Code of Practice on Transparency of AI-generated Content</a></li>
+<li><a href="https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/">Gibson Dunn: EU AI Act omnibus agreement</a>, for the reported grace period</li>
+<li><a href="https://www.paulweiss.com/insights/client-memos/eu-finalises-transparency-rules-for-ai-generated-content">Paul Weiss: EU finalises transparency rules for AI-generated content</a>, for the reported dates and the multi-layered approach</li>
+</ul>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>General information only, not legal advice. The rules are still being interpreted, so check the sources linked on each page and ask a lawyer about your specific case.</p>
+    <p>Published by Mayurventure. I sell an Article 50 template kit for agencies:
+    <a href="https://mayurventure.gumroad.com/l/article50-agency-kit">EU AI Act Article 50 Disclosure Kit for Agencies</a>.
+    Every guide here stands on its own; you don't need the kit to use them.</p>
+  </div>
+</footer>
+</body>
+</html>
