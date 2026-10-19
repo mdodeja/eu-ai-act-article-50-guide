@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Article 50 and GDPR for chatbots: where the two overlap | Article 50 Guide for Agencies</title>
+<meta name="description" content="How the EU AI Act&#x27;s chatbot disclosure duty sits next to the GDPR for a customer chatbot, what each one asks for, where one notice can serve both, and the GDPR points agencies most often miss.">
+<link rel="canonical" href="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/article-50-and-gdpr-for-chatbots.html">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:title" content="Article 50 and GDPR for chatbots: where the two overlap | Article 50 Guide for Agencies">
+<meta property="og:description" content="How the EU AI Act&#x27;s chatbot disclosure duty sits next to the GDPR for a customer chatbot, what each one asks for, where one notice can serve both, and the GDPR points agencies most often miss.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/article-50-and-gdpr-for-chatbots.html">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Article 50 and GDPR for chatbots: where the two overlap", "description": "How the EU AI Act's chatbot disclosure duty sits next to the GDPR for a customer chatbot, what each one asks for, where one notice can serve both, and the GDPR points agencies most often miss.", "dateModified": "2026-10-19", "mainEntityOfPage": "https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/article-50-and-gdpr-for-chatbots.html", "publisher": {"@type": "Organization", "name": "Mayurventure"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Article 50 Guide for Agencies</a>
+    <nav><a href="../index.html">Guides</a><a href="../about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Article 50 and GDPR for chatbots: where the two overlap</h1>
+<p class="meta">Last reviewed 19 October 2026</p>
+<div class="short"><strong>Short answer.</strong> The two laws ask different questions. Article 50 asks whether people know they are talking to an AI. The GDPR asks what happens to their personal data. A chatbot that collects names, emails or order details needs both, and the AI Act says it does not affect the GDPR. You can put both messages at the start of the chat, but meeting one does not meet the other.</div>
+<h2>Two laws, two questions</h2>
+<p>A customer chatbot on an EU-facing site usually falls under two sets of rules at once.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>AI Act, Article 50(1)</th>
+<th>GDPR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The question</td>
+<td>Do people know they are dealing with an AI system?</td>
+<td>Is their personal data handled lawfully, fairly and transparently?</td>
+</tr>
+<tr>
+<td>Who carries it</td>
+<td>The provider of the chatbot system (who builds or brands it)</td>
+<td>The controller (who decides why and how data is processed), with processors acting for it</td>
+</tr>
+<tr>
+<td>When it applies</td>
+<td>Whenever the system interacts directly with people, unless it is obvious</td>
+<td>Whenever the chatbot processes personal data</td>
+</tr>
+<tr>
+<td>Main output</td>
+<td>A clear AI disclosure at the latest at first interaction (Article 50(5))</td>
+<td>A privacy notice, a lawful basis, contracts, security, and rights handling</td>
+</tr>
+</tbody>
+</table>
+<p>Article 2(7) of the AI Act says the Act does not affect the GDPR. Article 50(6) adds that the transparency duties are without prejudice to other transparency obligations in EU or national law. So the GDPR applies in full alongside the AI disclosure; one does not replace the other.</p>
+<h2>Where they overlap</h2>
+<p>Both laws care about what the user is told at the start of the conversation. That is the one place where you can do both jobs with one design:</p>
+<blockquote>
+<p>"You're chatting with an AI assistant. It can make mistakes, and you can ask for a person at any time. We use what you type here to answer your question. See our privacy notice for how we handle it."</p>
+</blockquote>
+<p>The first sentence handles Article 50. The last two point to the GDPR information. The <a href="chatbot-ai-disclosure-wording.html">disclosure wording guide</a> covers the AI part in more detail.</p>
+<p>What the overlap does not do: a link to a privacy notice is not an AI disclosure, and an AI disclosure is not a privacy notice. If either half is missing, that law is not met.</p>
+<h2>GDPR points that chatbots often miss</h2>
+<p>These come up in most chatbot builds. They are general pointers, not a full GDPR review.</p>
+<ol>
+<li><strong>The privacy notice has to cover the chat.</strong> Article 13 GDPR requires information at the time data is collected: who the controller is, the purposes, the lawful basis, recipients (including the chatbot vendor), retention, and the user's rights. A site-wide notice written before the bot existed usually says nothing about chat logs.</li>
+<li><strong>The vendor is usually a processor.</strong> If a third-party platform or model provider processes chat content for your client, the client needs a data processing agreement with it under Article 28. Check whether the vendor uses chat data to train its models, and whether that can be switched off.</li>
+<li><strong>International transfers.</strong> If the vendor or its model runs outside the EU, the transfer rules in Chapter V GDPR apply. Check what mechanism the vendor relies on.</li>
+<li><strong>Retention.</strong> Decide how long chat transcripts are kept and delete them on schedule. "Forever, in the vendor's dashboard" is the common default and the common problem.</li>
+<li><strong>Users type more than you ask for.</strong> People paste order numbers, health details and account information into chat boxes. Plan for special category data even if the bot never asks for it, for example by warning users not to share it and by limiting who can read transcripts.</li>
+<li><strong>Automated decisions.</strong> If the bot decides something with legal or similarly significant effects on a person by itself, such as refusing a refund or a loan, Article 22 GDPR applies. Most support bots stay clear of this by handing those decisions to a person.</li>
+<li><strong>Impact assessment.</strong> A data protection impact assessment under Article 35 is required where processing is likely to result in a high risk. New technology handling customer data at scale is a common trigger; decide and document whether one is needed.</li>
+<li><strong>Cookies and local storage.</strong> A chat widget that stores identifiers in the browser can fall under the ePrivacy rules on storing and reading information on a user's device, which are separate from both laws above.</li>
+</ol>
+<h2>Who does what in an agency setup</h2>
+<p>Roles under the two laws do not always line up. An agency can be the provider of a branded chatbot under the AI Act while its client is the controller under the GDPR, and the agency is the client's processor. The <a href="does-article-50-apply-to-client-chatbots.html">guide on whether Article 50 applies to client chatbots</a> covers the AI Act roles. For the GDPR, write the roles into the contract: who is controller, who is processor, and who answers access and deletion requests that arrive through the chat.</p>
+<h2>A combined launch check</h2>
+<ul>
+<li>[ ] AI disclosure shown before or at the first message</li>
+<li>[ ] Privacy notice updated to cover chat data, linked from the chat window</li>
+<li>[ ] Lawful basis for processing chat content recorded</li>
+<li>[ ] Data processing agreement in place with the chatbot vendor</li>
+<li>[ ] Vendor's training-on-your-data setting checked</li>
+<li>[ ] Transfer mechanism checked if data leaves the EU</li>
+<li>[ ] Transcript retention period set and applied</li>
+<li>[ ] Handover to a person for decisions with significant effects</li>
+<li>[ ] DPIA decision recorded</li>
+<li>[ ] Widget storage covered by the site's consent setup where required</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a> (AI Act) on EUR-Lex: Article 2(7) and Article 50.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679</a> (GDPR) on EUR-Lex: Articles 13, 22, 28, 35 and Chapter V.</li>
+<li><a href="https://eur-lex.europa.eu/eli/dir/2002/58/oj">Directive 2002/58/EC</a> (ePrivacy Directive) on EUR-Lex: Article 5(3).</li>
+<li><a href="https://artificialintelligenceact.eu/article/50/">Article 50 text</a> at artificialintelligenceact.eu.</li>
+<li><a href="https://www.edpb.europa.eu/">European Data Protection Board</a> for guidance on applying the GDPR.</li>
+</ul>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>General information only, not legal advice. The rules are still being interpreted, so check the sources linked on each page and ask a lawyer about your specific case.</p>
+    <p>Published by Mayurventure. I sell an Article 50 template kit for agencies:
+    <a href="https://mayurventure.gumroad.com/l/article50-agency-kit">EU AI Act Article 50 Disclosure Kit for Agencies</a>.
+    Every guide here stands on its own; you don't need the kit to use them.</p>
+  </div>
+</footer>
+</body>
+</html>
