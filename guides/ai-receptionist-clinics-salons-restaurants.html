@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI phone receptionists for clinics, salons and restaurants: what to say and what to keep away from the bot | Article 50 Guide for Agencies</title>
+<meta name="description" content="An AI receptionist that answers calls and takes bookings for a clinic, salon or restaurant has to say it is an AI at the start of the call under Article 50. The rest depends on the business: health data and triage in clinics, payments and no-shows in salons, allergens in restaurants.">
+<link rel="canonical" href="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-receptionist-clinics-salons-restaurants.html">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:title" content="AI phone receptionists for clinics, salons and restaurants: what to say and what to keep away from the bot | Article 50 Guide for Agencies">
+<meta property="og:description" content="An AI receptionist that answers calls and takes bookings for a clinic, salon or restaurant has to say it is an AI at the start of the call under Article 50. The rest depends on the business: health data and triage in clinics, payments and no-shows in salons, allergens in restaurants.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-receptionist-clinics-salons-restaurants.html">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI phone receptionists for clinics, salons and restaurants: what to say and what to keep away from the bot", "description": "An AI receptionist that answers calls and takes bookings for a clinic, salon or restaurant has to say it is an AI at the start of the call under Article 50. The rest depends on the business: health data and triage in clinics, payments and no-shows in salons, allergens in restaurants.", "dateModified": "2026-10-25", "mainEntityOfPage": "https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/ai-receptionist-clinics-salons-restaurants.html", "publisher": {"@type": "Organization", "name": "Mayurventure"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Article 50 Guide for Agencies</a>
+    <nav><a href="../index.html">Guides</a><a href="../about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>AI phone receptionists for clinics, salons and restaurants: what to say and what to keep away from the bot</h1>
+<p class="meta">Last reviewed 25 October 2026</p>
+<div class="short"><strong>Short answer.</strong> Open every call with one sentence saying it is an AI and how to reach a person. That covers Article 50 for all three. The sector rules are where the risk is. A clinic bot hears health data and must not slide into triage. A salon or restaurant bot should not take card numbers by voice, and a restaurant bot should read allergen answers from a checked list or pass them to staff.</div>
+<h2>The part that is the same everywhere</h2>
+<p>An AI that answers the phone interacts directly with people, so Article 50(1) of the AI Act applies. Callers have to be told they are talking to an AI at the latest at the first interaction (Article 50(5)). On a phone call that means the greeting:</p>
+<blockquote>
+<p>"Hello, you've reached Riverside Dental. I'm the practice's AI assistant and I can book, move or cancel appointments. To speak to someone at reception, say 'reception' at any time."</p>
+</blockquote>
+<p>The <a href="ai-voice-agent-disclosure.html">voice agent guide</a> covers wording, transfers, voicemail and outbound calls. The duty sits with the provider of the system, which is often the software vendor, but the business that switches it on is the one callers complain to, so check the greeting yourself.</p>
+<p>What changes by sector is what the bot hears and what it is allowed to decide.</p>
+<h2>Clinics: health data and the triage line</h2>
+<p><strong>Health data.</strong> A caller who says "I need an appointment, my tooth is swollen and I have a fever" has given health data. That is special category data under Article 9 of the GDPR, which needs one of the Article 9(2) conditions on top of a normal lawful basis, and a bot that processes it at scale is a likely case for a data protection impact assessment (Article 35). Check where call audio and transcripts are stored, for how long, and whether the vendor uses them to train its models.</p>
+<p><strong>Do not let the bot triage.</strong> Booking the next free slot is administration. Deciding who is urgent is a clinical call, and it moves the system into other law:</p>
+<ul>
+<li>The AI Act lists as high-risk AI systems used to evaluate and classify emergency calls and emergency healthcare patient triage systems (Annex III, point 5(d)). Under the Digital Omnibus, high-risk duties for Annex III systems apply from 2 December 2027.</li>
+<li>Software intended by its manufacturer for a medical purpose, such as diagnosis, prediction or prognosis, can be a medical device under the Medical Device Regulation (Regulation (EU) 2017/745, Article 2(1)).</li>
+</ul>
+<p>A receptionist bot that books appointments is unlikely to be either. One that asks about symptoms and decides who gets seen today might be. Keep a hard rule: any mention of chest pain, breathing problems, heavy bleeding, suicidal thoughts or similar triggers an immediate transfer or an instruction to call the emergency number (112 in the EU), and the bot gives no medical advice.</p>
+<h2>Salons: bookings, deposits and no-shows</h2>
+<p><strong>Payments.</strong> Don't let the bot collect full card numbers by voice. Card data in a call recording or transcript is hard to secure, and card schemes' security standards apply to anyone who stores it. Send a payment or deposit link by SMS or email instead, through your booking system's payment provider.</p>
+<p><strong>Deposits and cancellation fees.</strong> If the bot tells callers about a deposit or late-cancellation fee, the wording has to match your actual terms. A bot that improvises a policy creates a promise you may have to honour. Keep these answers fixed, not generated.</p>
+<p><strong>Recognising regulars.</strong> Matching a caller's number to their booking history is ordinary personal data processing and should be covered in your privacy notice. Identifying people by their voice is biometric processing, which brings the GDPR's special category rules and can bring AI Act duties too (Annex III, point 1 covers some biometric identification systems). Most salons have no reason to do it.</p>
+<h2>Restaurants: allergens and reservations</h2>
+<p><strong>Allergens.</strong> EU food information rules require allergen information for non-prepacked food, such as restaurant meals, to be available to customers (Regulation (EU) No 1169/2011, Articles 9(1)(c) and 44). A generative bot that guesses whether a dish contains nuts is a real risk. Either have it read answers from a dish-by-dish allergen list that staff maintain, or have it say "I'll pass that to the team" and take a callback number. Never let it say a dish is "safe" for an allergy.</p>
+<p><strong>Reservations and changes.</strong> Confirm every booking by text or email so the guest has a record that does not depend on the call. Say clearly when a request (a large group, a special occasion) needs a person to confirm it.</p>
+<h2>One script, three variants</h2>
+<table>
+<thead>
+<tr>
+<th>Sector</th>
+<th>After the AI greeting, add</th>
+<th>Hand to a person when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clinic</td>
+<td>"I can't give medical advice. If this is an emergency, hang up and call 112."</td>
+<td>Any symptom question, urgency, results, prescriptions</td>
+</tr>
+<tr>
+<td>Salon</td>
+<td>"I'll text you a link to pay the deposit."</td>
+<td>Complaints, refunds, treatment suitability questions</td>
+</tr>
+<tr>
+<td>Restaurant</td>
+<td>"For allergy questions I'll read from our allergen list or pass you to the team."</td>
+<td>Allergies not on the list, large groups, complaints</td>
+</tr>
+</tbody>
+</table>
+<h2>Setup check</h2>
+<ul>
+<li>[ ] Greeting says it is an AI and how to reach a person, before anything else.</li>
+<li>[ ] Call recording and transcripts covered in the privacy notice, with a retention period.</li>
+<li>[ ] Vendor's training-on-your-data setting checked.</li>
+<li>[ ] Clinic: emergency words trigger a transfer or an emergency instruction; no triage or medical advice.</li>
+<li>[ ] Salon and restaurant: no card numbers taken by voice.</li>
+<li>[ ] Policy answers (fees, allergens, opening hours) come from fixed text, not generation.</li>
+<li>[ ] Every booking confirmed in writing.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a> (AI Act) on EUR-Lex: Article 50(1) and (5), Annex III point 5(d).</li>
+<li><a href="https://artificialintelligenceact.eu/annex/3/">Annex III</a> and <a href="https://artificialintelligenceact.eu/article/50/">Article 50</a> at artificialintelligenceact.eu.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2026/1744/oj">Regulation (EU) 2026/1744</a> (Digital Omnibus on AI) on EUR-Lex, for the high-risk dates.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679</a> (GDPR) on EUR-Lex: Articles 9 and 35.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2017/745/oj">Regulation (EU) 2017/745</a> (Medical Device Regulation) on EUR-Lex: Article 2(1).</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2011/1169/oj">Regulation (EU) No 1169/2011</a> (food information to consumers) on EUR-Lex: Articles 9 and 44.</li>
+</ul>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>General information only, not legal advice. The rules are still being interpreted, so check the sources linked on each page and ask a lawyer about your specific case.</p>
+    <p>Published by Mayurventure. I sell an Article 50 template kit for agencies:
+    <a href="https://mayurventure.gumroad.com/l/article50-agency-kit">EU AI Act Article 50 Disclosure Kit for Agencies</a>.
+    Every guide here stands on its own; you don't need the kit to use them.</p>
+  </div>
+</footer>
+</body>
+</html>
