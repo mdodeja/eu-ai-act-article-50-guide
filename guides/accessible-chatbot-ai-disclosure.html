@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making a chatbot&#x27;s AI disclosure accessible: what Article 50(5) asks for | Article 50 Guide for Agencies</title>
+<meta name="description" content="Article 50(5) of the EU AI Act says the AI disclosure must meet the applicable accessibility requirements. What that points to (the European Accessibility Act and the Web Accessibility Directive), who is exempt, and how to make a chatbot&#x27;s &quot;I&#x27;m an AI&quot; line work for screen reader, keyboard and low-vision users.">
+<link rel="canonical" href="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/accessible-chatbot-ai-disclosure.html">
+<link rel="stylesheet" href="../style.css">
+<meta property="og:title" content="Making a chatbot&#x27;s AI disclosure accessible: what Article 50(5) asks for | Article 50 Guide for Agencies">
+<meta property="og:description" content="Article 50(5) of the EU AI Act says the AI disclosure must meet the applicable accessibility requirements. What that points to (the European Accessibility Act and the Web Accessibility Directive), who is exempt, and how to make a chatbot&#x27;s &quot;I&#x27;m an AI&quot; line work for screen reader, keyboard and low-vision users.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/accessible-chatbot-ai-disclosure.html">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Making a chatbot's AI disclosure accessible: what Article 50(5) asks for", "description": "Article 50(5) of the EU AI Act says the AI disclosure must meet the applicable accessibility requirements. What that points to (the European Accessibility Act and the Web Accessibility Directive), who is exempt, and how to make a chatbot's \"I'm an AI\" line work for screen reader, keyboard and low-vision users.", "dateModified": "2026-10-28", "mainEntityOfPage": "https://mdodeja.github.io/eu-ai-act-article-50-guide/guides/accessible-chatbot-ai-disclosure.html", "publisher": {"@type": "Organization", "name": "Mayurventure"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Article 50 Guide for Agencies</a>
+    <nav><a href="../index.html">Guides</a><a href="../about.html">About</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article>
+<h1>Making a chatbot&#x27;s AI disclosure accessible: what Article 50(5) asks for</h1>
+<p class="meta">Last reviewed 28 October 2026</p>
+<div class="short"><strong>Short answer.</strong> Article 50(5) says the AI disclosure &quot;shall conform to the applicable accessibility requirements&quot;. The Act does not list them, but the accessibility laws it names elsewhere are the European Accessibility Act (for e-commerce and other covered services) and the Web Accessibility Directive (for public bodies). Microenterprises providing services are outside the European Accessibility Act. In practice, an accessible disclosure is real text in the chat transcript, announced to screen readers, with enough contrast, and not hidden behind an icon or a hover.</div>
+<h2>What the Act says</h2>
+<p>Article 50(5) covers every disclosure in Article 50, chatbots included:</p>
+<blockquote>
+<p>"The information referred to in paragraphs 1 to 4 shall be provided to the natural persons concerned in a clear and distinguishable manner at the latest at the time of the first interaction or exposure. The information shall conform to the applicable accessibility requirements."</p>
+</blockquote>
+<p>"Applicable" is not defined in Article 50. Where the Act deals with accessibility for high-risk systems, Article 16(l) points to two directives: the Web Accessibility Directive (EU) 2016/2102 and the European Accessibility Act, Directive (EU) 2019/882. Reading Article 50(5) the same way, the disclosure has to meet whichever of those already applies to the website or app the chatbot sits on. That is a reading, not settled law; the Commission's guidelines may say more.</p>
+<h2>Which rules apply to whom</h2>
+<table>
+<thead>
+<tr>
+<th>Where the chatbot runs</th>
+<th>Accessibility rule that already applies</th>
+<th>Effect on the AI disclosure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public-sector website or app</td>
+<td>Web Accessibility Directive</td>
+<td>Disclosure must meet the same standard as the rest of the site</td>
+</tr>
+<tr>
+<td>Online shop, banking, transport ticketing or another service covered by the European Accessibility Act (applies since 28 June 2025)</td>
+<td>European Accessibility Act</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Service run by a microenterprise (fewer than 10 staff and turnover or balance sheet of no more than EUR 2 million)</td>
+<td>Not the European Accessibility Act: its requirements do not apply to microenterprises providing services, per Ireland's CCPC</td>
+<td>No specific accessibility law, but the disclosure still has to be "clear and distinguishable"</td>
+</tr>
+<tr>
+<td>B2B site not in a covered sector</td>
+<td>Often none</td>
+<td>Same as above</td>
+</tr>
+</tbody>
+</table>
+<p>National laws implementing the two directives add detail and differ by country. Germany's BFSG is one example.</p>
+<p>For agencies, the useful point is that the disclosure is part of the chat interface. If a client's site has to meet the European Accessibility Act, an inaccessible chat widget is already a problem, and the AI line inherits that.</p>
+<h2>What an accessible disclosure looks like</h2>
+<p>The harmonised European standard for these directives is EN 301 549, whose web clauses follow WCAG 2.1 level AA. These are the WCAG success criteria a chatbot disclosure most often fails:</p>
+<ul>
+<li><strong>Real text, not an image or icon (1.1.1).</strong> A robot icon or an "AI" badge alone is not a disclosure for a screen reader user unless it has a text alternative that says the same thing. Better: put the words in the first message.</li>
+<li><strong>Announced when it appears (4.1.3, status messages).</strong> Chat messages added to the page should be announced, usually through an ARIA live region on the message list. Test that the first bot message, with the disclosure in it, is read out without the user moving focus.</li>
+<li><strong>Contrast (1.4.3).</strong> Small grey "Powered by AI" text under the input box often falls below the 4.5:1 ratio for normal text. Check it with a contrast checker.</li>
+<li><strong>Not colour alone (1.4.1).</strong> A different bubble colour for the bot is fine as an extra cue, but it cannot be the only thing that says "this is an AI".</li>
+<li><strong>Keyboard (2.1.1).</strong> The chat opens, the disclosure can be reached and the "talk to a person" option works with the keyboard alone.</li>
+<li><strong>No hover-only text.</strong> A tooltip that says "AI assistant" when you hover the avatar does not reach keyboard, touch or screen reader users.</li>
+<li><strong>Language of the page (3.1.1 and 3.1.2).</strong> If the bot answers in the visitor's language, mark the language so a screen reader pronounces the disclosure correctly.</li>
+</ul>
+<p>Plain wording helps everyone: "I'm an AI assistant, not a person" is easier to follow than "This conversational agent is powered by generative artificial intelligence". The <a href="chatbot-ai-disclosure-wording.html">disclosure wording guide</a> has examples.</p>
+<h2>Voice and video</h2>
+<ul>
+<li><strong>Voice agents.</strong> The disclosure is spoken, so it reaches blind callers already. Deaf or hard-of-hearing users who reach the business by relay or text chat need the same line in text. The <a href="ai-voice-agent-disclosure.html">voice agent guide</a> covers the spoken wording.</li>
+<li><strong>AI avatars and video.</strong> If the disclosure is only spoken, captions must carry it (1.2.2). If it is only on screen, a screen reader user may miss it, so say it in the audio too.</li>
+</ul>
+<h2>A quick test before go-live</h2>
+<ul>
+<li>[ ] Turn on a screen reader (VoiceOver, NVDA or TalkBack), open the chat and confirm the AI line is read out.</li>
+<li>[ ] Open the chat, reach the disclosure and the "person" option with the Tab key only.</li>
+<li>[ ] Check the contrast of the disclosure text and any "AI" label.</li>
+<li>[ ] Zoom to 200% and confirm the disclosure is not cut off or hidden.</li>
+<li>[ ] Confirm icons and badges have text alternatives that say "AI".</li>
+<li>[ ] For voice or video, check the transcript or captions include the disclosure.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689</a> (AI Act) on EUR-Lex: Article 16(l) and Article 50(5).</li>
+<li><a href="https://artificialintelligenceact.eu/article/50/">Article 50 text</a> and <a href="https://artificialintelligenceact.eu/article/16/">Article 16 text</a> at artificialintelligenceact.eu.</li>
+<li><a href="https://eur-lex.europa.eu/eli/dir/2019/882/oj">Directive (EU) 2019/882</a> (European Accessibility Act) on EUR-Lex.</li>
+<li><a href="https://eur-lex.europa.eu/eli/dir/2016/2102/oj">Directive (EU) 2016/2102</a> (Web Accessibility Directive) on EUR-Lex.</li>
+<li><a href="https://www.ccpc.ie/business/enforcement/accessibility/european-accessibility-act-guidelines-for-microenterprises/">CCPC (Ireland): European Accessibility Act guidelines for microenterprises</a>, for the microenterprise definition and the services exemption.</li>
+<li><a href="https://www.w3.org/TR/WCAG21/">W3C: WCAG 2.1</a>, for the success criteria named above.</li>
+</ul>
+</article>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>General information only, not legal advice. The rules are still being interpreted, so check the sources linked on each page and ask a lawyer about your specific case.</p>
+    <p>Published by Mayurventure. I sell an Article 50 template kit for agencies:
+    <a href="https://mayurventure.gumroad.com/l/article50-agency-kit">EU AI Act Article 50 Disclosure Kit for Agencies</a>.
+    Every guide here stands on its own; you don't need the kit to use them.</p>
+  </div>
+</footer>
+</body>
+</html>
